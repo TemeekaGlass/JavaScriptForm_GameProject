@@ -21,12 +21,3 @@ let helloWord = [];
 
   }
 
-  /* String inputValue = "Hello to you";
-   System.out.println(inputValue.reverse());
-  char[] inputChar = inputValue.toCharArray();
-  int length = inputChar.length;
-  for(int i = length -1; i >= 0; i--){
-    System.out.println(inputChar[i]);
-  } 
-  
-}*/
