@@ -1,13 +1,17 @@
+
+
 //This was me trying something out - I just wanted to see if i could get the logic or Some kind of logic down
 //for switching vowels
-//this is ofcourse far from what it will be as I am not taking and retaining anything from an array yet
+//this is ofcourse far from what it will be as I am not taking and retaining anything from an array ye
 
-let paragraph = "hi my name is not very important at the moment";// Want this to conatin an Input value Eventually
-const vowels = ['a','e','i','o','u'];
-let letters = [];
+
+
+let paragraph = "hello my name is not very important at the moment";// Want this to conatin an Input value Eventually
+newPara = paragraph.split(' ');
+const vowels = ['a','e','i','o','u', 'y'];
 let lettersToSwitch = [];
-//let numVowels = 0;
-let storedVowels = [];
+
+switchedVowelParagrapgh = [];
 newPara = paragraph.split(" ");
 
 //let word = "hellO"; 
@@ -18,22 +22,92 @@ newPara = paragraph.split(" ");
 
 function separateParagraphIntoWords(paragraph){
   let separatedWord;
-  let arrayParagraph = [];
+
   separatedWord = paragraph.split(" ");
   for (let i = 0; i < separatedWord.length; i++){
     arrayParagraph.push(separatedWord[i]);
-    //getVowels(arrayParagraph);
-
 } 
 return arrayParagraph;
 };
 
-function getAndSwitchVowels(paragraph1){
 
-let numWords = 0;
-let numVowels = 0;
+function getAndSwitchVowels(word){
+  //console.log(word.length);
+  let arrayWord = word.split('') 
+  let storedVowelsIndex = [];
+  let storedVowels = [];
+  //let randomizeStoredValue = [];//storedVowelsIndex[(Math.random() * storedVowelsIndex.length) | 0];
+  let dontStopLoop;
+  
+  for (let l = 0; l < word.length; l++){
+    
+    for (let v = 0; v < vowels.length; v++){
+     
+      if (vowels[v] === word[l]){ 
+        storedVowelsIndex.push(word.indexOf(word[l]));
+        storedVowels.push(word[l]); 
+        //console.log(word[l]);
+        dontStopLoop = storedVowels.length;
+        //console.log(storedVowelsIndex + ' ope');
 
-word = paragraph1.split(' ');
+      // randomizeStoredValue =  storedVowelsIndex[Math.floor(Math.random() * storedVowelsIndex.length)];
+
+      //randomizeStoredValue =  storedVowelsIndex[Math.floor(Math.random() * storedVowelsIndex.length)];
+      }      
+  } 
+  
+}
+       
+if(dontStopLoop >= 2){
+  //console.log(curVow + ' omh');
+  //console.log(curVal);
+  //console.log(dontStopLoop);
+  while (storedVowels.length > 0){
+  //console.log(dontStopLoop);
+  let curVal = storedVowelsIndex[Math.floor(Math.random() * storedVowelsIndex.length)];
+  let curVow = storedVowels[0];
+  //console.log(storedVowels + ' jeeeezus');
+  //console.log(curVow + ' omh');
+  //console.log(curVal + ' dfg');
+  arrayWord.splice(curVal, 1, curVow);
+  storedVowelsIndex.splice(storedVowelsIndex.indexOf(curVal), 1);
+  storedVowels.shift();
+
+  }
+  return arrayWord.join('');
+  //console.log(arrayWord);
+  //console.log(storedVowels);
+  }
+  return arrayWord.join('');
+
+//console.log(arrayWord);
+  
+  };
+
+
+while (newPara.length > 0){    
+  //if(newPara.length > 0){
+  getAndSwitchVowels(newPara[0]);
+  switchedVowelParagrapgh.push(getAndSwitchVowels(newPara[0]));
+  newPara.shift();
+ // console.log(switchedVowelParagrapgh);
+   // console.log(newPara);
+}
+
+console.log(switchedVowelParagrapgh);
+
+
+
+
+/* function getAndSwitchVowels(word){
+
+//let numVowels = 0;
+
+let wordArray = paragraph1.split(' ');
+
+console.log(word.length);
+
+//if (wordArray.length > 0){
 
 word.forEach(element => {
 
@@ -46,15 +120,16 @@ for (let l = 0; l < element.length; l++){
          
         
         numWords++
-      } */
+      } 
+      
       storedVowels.push(element[l]);
-      numVowels++
+      //numVowels++
       //let toSee = word[l] + word.indexOf(word[l]);
       //console.log(word[l] + word.indexOf(word[l]));
       //console.log(storedVowels);
      
       console.log(element[l]);
-      console.log(numVowels);
+      //console.log(numVowels);
         //return storedVowels;  
     } 
 
@@ -62,13 +137,14 @@ for (let l = 0; l < element.length; l++){
 
 }
 
-console.log(word);
+//console.log(word);
 });
-//storedVowels = storedVowels.join('');
+//word.splice(0,1);
+//word.shift();
+//console.log(word)
 console.log(storedVowels);
-      console.log(newPara.length);
-//console.log(toSee);
-};
+
+};*/
 
 
 
@@ -77,7 +153,8 @@ console.log(storedVowels);
  if (element === 'a'){
  console.log(element);
  }
-});  */
+});  
+*/
 
 //let test = paragraph.split(' ');
 
@@ -85,11 +162,8 @@ console.log(storedVowels);
 /* test.forEach(element => {
   getAndSwitchVowels(element)
 }
-); */
-console.log(getAndSwitchVowels(paragraph));
-
-
-
+); 
+*/
 //console.log(test);
 
 
