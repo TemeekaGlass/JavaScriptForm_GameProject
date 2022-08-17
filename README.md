@@ -14,3 +14,6 @@ The General ideal I have for this and we can ofcourse change if need to is to ha
 This is just one example of a function of many. But the gist is to be able to select what ever we name the funtion and have the page/form adapt to what ever input we need and for the input to be displayed.
 
 Now to Gamify this - We need to think about it a little more!
+
+Sebastion added:
+*I propose we add 'cRazY CasE'!
