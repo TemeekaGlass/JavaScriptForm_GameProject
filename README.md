@@ -17,3 +17,5 @@ Now to Gamify this - We need to think about it a little more!
 
 Sebastion added:
 *I propose we add 'cRazY CasE'!
+
+NOTE: to start the project, cd into js-form-gameproject, run command 'npm i', then run 'npm start'. localhost:3000 *should be* default for local development.
