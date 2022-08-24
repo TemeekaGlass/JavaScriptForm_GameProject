@@ -1,10 +1,6 @@
 let paragraphString = "hello my name is not very important at the moment";// Want this to conatin an Input value Eventually
 
 //let curVow = storedVowels[Math.floor(Math.random() * storedVowelsIndex.length)];
-//let word = "hellO"; 
-//let newWord;
-//newWord = word.split("");
-//let helloWord = [];
 
 function getAndSwitchVowels(word) {
   const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
